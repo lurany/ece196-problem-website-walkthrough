@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECE196 Problem Website Walkthrough</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #14213d;
+      --muted: #5f6b85;
+      --accent: #2457ff;
+      --border: #dce3f0;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      margin-left: 18px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .hero, .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .button-row {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+
+    .section-subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+
+    .team-grid, .solutions-grid, .info-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .solutions-grid, .info-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: #f8faff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      object-fit: cover;
+      background: #e9eef8;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card h3, .card h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .muted { color: var(--muted); }
+
+    ul {
+      padding-left: 20px;
+      margin: 12px 0 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 12px 0 30px;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.1rem; }
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">ECE196 Final Project</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#team">Team</a>
+        <a href="#problem">Problem</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <p style="font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Problem Website Walkthrough</p>
+      <h1>Project Title</h1>
+      <p>
+        Intro 1-2 sentences
+      </p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="#problem">View Problem Page</a>
+        <a class="btn btn-secondary" href="#team">Meet the Team</a>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <h2 class="section-title">Team Page</h2>
+      <p class="section-subtitle">Team members' names and team photo</p>
+      <div class="team-grid">
+        <div class="card">
+          <div class="photo placeholder">Add Photo Here</div>
+          <h3>Team Member 1</h3>
+        </div>
+        <div class="card">
+          <div class="photo placeholder">Add Photo Here</div>
+          <h3>Team Member 2</h3>
+        </div>
+        <div class="card">
+          <div class="photo placeholder">Add Photo Here</div>
+          <h3>Team Member 3</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <h2 class="section-title">Problem Page</h2>
+      <p class="section-subtitle">Problem definition, motivation, existing solutions, and a clear walkthrough</p>
+
+      <div class="info-grid">
+        <div class="card">
+          <h3>Problem Definition</h3>
+          <p class="muted">1 to 2 sentences. Focus on one narrow problem and include who, what, and where.</p>
+          <p><strong>Your version:</strong>final problem definition.</p>
+        </div>
+
+        <div class="card">
+          <h3>Problem Motivation</h3>
+          <p class="muted">Explain why we team picked this problem and why it matters.</p>
+          <p>2 to 4 sentences explaining why this topic, how often it happens, and why it is worth solving.</p>
+        </div>
+
+        <div class="card">
+          <h3>Walkthrough Tips</h3>
+          <ul>
+            <li>Keep your explanation clear and short.</li>
+            <li>Point to each section while presenting.</li>
+            <li>Use visuals or screenshots where possible.</li>
+            <li>Stay within 1 to 2 minutes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Current Existing Solutions</h2>
+      <p class="section-subtitle">Show how people currently deal with the problem.</p>
+      <div class="solutions-grid">
+        <div class="card">
+          <div class="photo placeholder">Add Screenshot or Image</div>
+          <h4>Existing Solution 1</h4>
+          <p><strong>What works:</strong> Replace with what this solution does well.</p>
+          <p><strong>What is missing:</strong> Replace with what it does not address well.</p>
+        </div>
+        <div class="card">
+          <div class="photo placeholder">Add Screenshot or Image</div>
+          <h4>Existing Solution 2</h4>
+          <p><strong>What works:</strong> Replace with what this solution does well.</p>
+          <p><strong>What is missing:</strong> Replace with what it does not address well.</p>
+        </div>
+        <div class="card">
+          <div class="photo placeholder">Add Screenshot or Image</div>
+          <h4>Existing Solution 3</h4>
+          <p><strong>What works:</strong> Replace with what this solution does well.</p>
+          <p><strong>What is missing:</strong> Replace with what it does not address well.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    ECE196 Problem Website Walkthrough
+  </footer>
+</body>
+</html>
