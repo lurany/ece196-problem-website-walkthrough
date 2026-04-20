@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,8 +15,14 @@
       --border: #dce3f0;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +35,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(8px);
     }
@@ -55,7 +62,9 @@
       font-weight: 600;
     }
 
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
     .container {
       max-width: 1100px;
@@ -63,7 +72,8 @@
       padding: 32px 20px 60px;
     }
 
-    .hero, .section {
+    .hero,
+    .section {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 24px;
@@ -120,7 +130,9 @@
       color: var(--muted);
     }
 
-    .team-grid, .solutions-grid, .info-grid {
+    .team-grid,
+    .solutions-grid,
+    .info-grid {
       display: grid;
       gap: 20px;
     }
@@ -140,11 +152,13 @@
       margin: 0 auto;
     }
 
-        .Proposed-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 images per row */
-  gap: 16px; /* space between images */
-}
+    .Proposed-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 images per row */
+      gap: 16px;
+      /* space between images */
+    }
 
     .card {
       background: #f8faff;
@@ -173,12 +187,15 @@
       padding: 20px;
     }
 
-    .card h3, .card h4 {
+    .card h3,
+    .card h4 {
       margin-top: 0;
       margin-bottom: 10px;
     }
 
-    .muted { color: var(--muted); }
+    .muted {
+      color: var(--muted);
+    }
 
     ul {
       padding-left: 20px;
@@ -191,23 +208,149 @@
       padding: 12px 0 30px;
     }
 
-    
+
     @media (max-width: 700px) {
-      .hero h1 { font-size: 2.1rem; }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
       .nav-inner {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .nav-links a {
         margin-left: 0;
         margin-right: 14px;
       }
+
       .solutions-grid {
         grid-template-columns: 1fr;
       }
     }
+
+    body {
+      margin-top: 20px;
+    }
+
+    .timeline {
+      border-left: 3px solid #727cf5;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      background: rgba(114, 124, 245, 0.09);
+      margin: 0 auto;
+      letter-spacing: 0.2px;
+      position: relative;
+      line-height: 1.4em;
+      font-size: 1.03em;
+      padding: 50px;
+      list-style: none;
+      text-align: left;
+      max-width: 40%;
+    }
+
+    @media (max-width: 767px) {
+      .timeline {
+        max-width: 98%;
+        padding: 25px;
+      }
+    }
+
+    .timeline h1 {
+      font-weight: 300;
+      font-size: 1.4em;
+    }
+
+    .timeline h2,
+    .timeline h3 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline .event {
+      border-bottom: 1px dashed #e8ebf1;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event {
+        padding-top: 30px;
+      }
+    }
+
+    .timeline .event:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    .timeline .event:before,
+    .timeline .event:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .timeline .event:before {
+      left: -207px;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 100;
+      font-size: 0.9em;
+      min-width: 120px;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event:before {
+        left: 0px;
+        text-align: left;
+      }
+    }
+
+    .timeline .event:after {
+      -webkit-box-shadow: 0 0 0 3px #727cf5;
+      box-shadow: 0 0 0 3px #727cf5;
+      left: -55.8px;
+      background: #fff;
+      border-radius: 50%;
+      height: 9px;
+      width: 9px;
+      content: "";
+      top: 5px;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event:after {
+        left: -31.8px;
+      }
+    }
+
+    .rtl .timeline {
+      border-left: 0;
+      text-align: right;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+      border-right: 3px solid #727cf5;
+    }
+
+    .rtl .timeline .event::before {
+      left: 0;
+      right: -170px;
+    }
+
+    .rtl .timeline .event::after {
+      left: 0;
+      right: -55.8px;
+    }
   </style>
+
 </head>
+
 <body>
   <nav class="navbar">
     <div class="nav-inner">
@@ -216,13 +359,18 @@
         <a href="#home">Home</a>
         <a href="#team">Team</a>
         <a href="#problem">Problem</a>
+        <a href="#current-solutions">Current Solutions</a>
+        <a href="#proposed-solution">Proposed Solution</a>
+        <a href="#milestones">Milestones</a>
       </div>
     </div>
   </nav>
 
   <main class="container">
     <section class="hero" id="home">
-      <p style="font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Problem Website Walkthrough</p>
+      <p
+        style="font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">
+        Problem Website Walkthrough</p>
       <h1>UCSD Recreational Court Occupancy Tracker</h1>
       <p>
         A system that helps UCSD students check how crowded campus courts are before arriving to play.
@@ -247,17 +395,17 @@
         </div>
         <div class="card">
           <img src="images/ethanUpdatedPic.jpg" alt="Ethan Ha" class="photo">
-          <h3>Ethan Ha</h3> 
+          <h3>Ethan Ha</h3>
           <p class="bio">
-            I’m a senior ECE student who specializes in software and wants to gain more hardware experience. 
+            I’m a senior ECE student who specializes in software and wants to gain more hardware experience.
             A fun fact about me is that I have 2 cats!
           </p>
         </div>
         <div class="card">
           <img src="images/RCpic.jpeg" alt="RyanC" class="photo">
           <h3>Ryan Chen</h3>
-           <p class="bio">
-            I am a senior CE student who specializes in robotics and wants to gain more software and PCB experience. 
+          <p class="bio">
+            I am a senior CE student who specializes in robotics and wants to gain more software and PCB experience.
             I enjoy flying drones in my spare time!
           </p>
         </div>
@@ -270,30 +418,35 @@
       <div class="info-grid">
         <div class="card">
           <h3>Problem Definition</h3>
-          <p><strong>Our problem:</strong>UCSD students who use campus basketball courts do not have a reliable way to know 
-            how crowded the courts are before arriving. This can lead to wasted time walking to the courts 
-            only to find that there is no space to play, or missing chances to play when the courts are actually open.</p>
+          <p><strong>Our problem:</strong>UCSD students who use campus basketball courts do not have a reliable way to
+            know
+            how crowded the courts are before arriving. This can lead to wasted time walking to the courts
+            only to find that there is no space to play, or missing chances to play when the courts are actually open.
+          </p>
         </div>
 
         <div class="card">
           <h3>Problem Motivation</h3>
-          <p>Our team chose this problem because students often have to gamble whether the courts will be open or crowded. 
-            Right now, many students rely on fixed schedules, but those do not provide reliable real time information. 
+          <p>Our team chose this problem because students often have to gamble whether the courts will be open or
+            crowded.
+            Right now, many students rely on fixed schedules, but those do not provide reliable real time information.
             We wanted to focus on a common campus problem that affects recreation and convenience.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="current-solutions">
       <h2 class="section-title">Current Existing Solutions</h2>
       <div class="solutions-grid">
         <div class="card">
           <img src="images/ucsdBooking.jpg" alt="UCSD bookings" class="photo">
           <h4>Booking a Court</h4>
-          <p><strong>What works:</strong></p> <ul> 
-            <li>Guarantees a court if planned ahead of time.</li> 
+          <p><strong>What works:</strong></p>
+          <ul>
+            <li>Guarantees a court if planned ahead of time.</li>
           </ul>
-          <p><strong>What is missing:</strong></p> <ul>
+          <p><strong>What is missing:</strong></p>
+          <ul>
             <li>Doesn't provide the ability to check live occupancy.</li>
             <li>Doesn't cover basketball courts.</li>
           </ul>
@@ -303,55 +456,81 @@
           <h4>Checking General Open Recreation Hours</h4>
           <p><strong>What works:</strong> </p>
           <ul>
-          <li>Gives a general idea of when the courts are available.</li>
+            <li>Gives a general idea of when the courts are available.</li>
           </ul>
           <p><strong>What is missing:</strong> </p>
           <ul>
-          <li>Doesn't provide the ability to check live occupancy. </li>
+            <li>Doesn't provide the ability to check live occupancy. </li>
           </ul>
         </div>
-    </section> 
+    </section>
 
-     <section class="section" id="Proposed Solution">
+    <section class="section" id="proposed-solution">
       <h2 class="section-title">Proposed Solution</h2>
       <div class="Proposed-grid">
-       <div class="card">
+        <div class="card">
           <img src="images/smallCameraCad1.jpg" alt="CameraCad1" class="photo" width="75%" height="75%">
-          
-        </div>
-       <div>
-         <img src="images/smallCameraCad2.jpg" alt="CameraCad2" class="photo" width="100%" height="100%">
 
-       </div>
+        </div>
+        <div>
+          <img src="images/smallCameraCad2.jpg" alt="CameraCad2" class="photo" width="100%" height="100%">
+
+        </div>
         <div>
           <img src="images/2CourtDiagram.JPG" alt="2Court" class="photo" width="65%" height="65%">
         </div>
         <div>
           <img src="images/4CourtDiagram.jpeg" alt="4Court" class="photo" width="100%" height="100%">
-          
+
         </div>
       </div>
-      
-        
-        
-     </section>
-  
-    <section class="section">
-      <h2 class="section-title">Milestones</h2>
-      <ol>
-        <li> Have parts ordered and delivered by the end of Week 4 or start of Week 5</li>
-        <li> Test Camera and motion sensors and ensure compatibility with PCB compoenents and processor</li>
-        <li> Finalize PCB design by end of Week 5 to be sent out for manufacturing</li>
-        <li> Get live camera feed to the processor and computer by the end of Week 6 or the latest start of Week 7</li>
-        <li> Sucessfully have a stable camera model to detect people by the end of Week 7</li>
-        <li>Test the camera in real situations in a court throughout Week 8 and design a mountable enclosure</li>
-        <li>Finalize testing with enclosure, record demo, and assemble final presentation throughout weeks 9-10</li>
-      </ol>
+
+
+
     </section>
-  </main>
+    <div class="container" id="milestones">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Timeline</h6>
+              <div id="content">
+                <ul class="timeline">
+                  <li class="event" data-date="(4/24) - (4/28)">
+                    <h3>Milestone 1: Friday of Week 4 - Tuesday of Week 5</h3>
+                    <p>Have parts approved, ordered, and delivered by the end of Week 5 so that we can begin assembly. The goal is to finish the hardware ASAP to allocate more time to backend.</p>
+                  </li>
+                  <li class="event" data-date="(4/26) - (4/30)">
+                    <h3>Milestone 2: Thursday of Week 5</h3>
+                    <p>Continue testing throughout Week 5 and finish PCB schematic and ready for final submission on 4/30. Weekly website update.</p>
+                  </li>
+                  <li class="event" data-date="(5/8) - (5/10)">
+                    <h3>Milestone 3: End of Week 6 - Start of Week 7</h3>
+                    <p>Test in live environment and finalize how and where we will gather, store, and display data. Weekly website update.</p>
+                  </li>
+                  <li class="event" data-date="(5/15)">
+                    <h3>Milestone 4: End of Week 7</h3>
+                    <p>Design mountable enclosure and design user interface for data display. Weekly website update.</p>
+                  </li>
+                  <li class="event" data-date="(5/15)">
+                    <h3>Milestone 5: End of Week 8</h3>
+                    <p>Print out mountable enclosure, start testing and gathering data in live environment. Weekly website update + work on poster + record demo video.</p>
+                  </li>
+                  <li class="event" data-date="(5/22)">
+                    <h3>Milestone 6: End of Week 9</h3>
+                    <p>Edit demo video, finalize poster, and finalize website for presentation.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <footer>
     ECE196 Problem Website Walkthrough
   </footer>
 </body>
+
 </html>
