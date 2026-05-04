@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECE196 Problem Website Walkthrough</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="brand">ECE196 Final Project</div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Explore Our Page ▾</button>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="index.html">Team</a>
+                        <a href="problem.html">Problem</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="milestones.html">Milestones</a>
+                        <a href="pcb.html">PCB Design</a>
+                        <a
+                            href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
+                        <a href="poster.html">Poster</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="milestones">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Timeline</h6>
+                        <div id="content">
+                            <ul class="timeline">
+                                <li class="event" data-date="(4/24) - (4/28)">
+                                    <h3>Milestone 1: Friday of Week 4 - Tuesday of Week 5</h3>
+                                    <p>Have parts approved, ordered, and delivered by the end of Week 5 so that we can
+                                        begin assembly.
+                                        The goal is to finish the hardware ASAP to allocate more time to backend.</p>
+                                </li>
+                                <li class="event" data-date="(4/26) - (4/30)">
+                                    <h3>Milestone 2: Thursday of Week 5</h3>
+                                    <p>Continue testing throughout Week 5 and finish PCB schematic and ready for final
+                                        submission on
+                                        4/30. Weekly website update.</p>
+                                </li>
+                                <li class="event" data-date="(5/8) - (5/10)">
+                                    <h3>Milestone 3: End of Week 6 - Start of Week 7</h3>
+                                    <p>Test in live environment and finalize how and where we will gather, store, and
+                                        display data.
+                                        Weekly website update.</p>
+                                </li>
+                                <li class="event" data-date="(5/15)">
+                                    <h3>Milestone 4: End of Week 7</h3>
+                                    <p>Design mountable enclosure and design user interface for data display. Weekly
+                                        website update.</p>
+                                </li>
+                                <li class="event" data-date="(5/15)">
+                                    <h3>Milestone 5: End of Week 8</h3>
+                                    <p>Print out mountable enclosure, start testing and gathering data in live
+                                        environment. Weekly
+                                        website update + work on poster + record demo video.</p>
+                                </li>
+                                <li class="event" data-date="(5/22)">
+                                    <h3>Milestone 6: End of Week 9</h3>
+                                    <p>Edit demo video, finalize poster, and finalize website for presentation.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.querySelector('.dropdown-toggle');
+        const menu = document.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.remove('open'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+        });
+    </script>
+</body>
+
+</html>

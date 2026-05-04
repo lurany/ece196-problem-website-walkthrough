@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECE196 Problem Website Walkthrough</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">ECE196 Final Project</div>
+      <div class="nav-links">
+        <div class="dropdown">
+          <button class="dropdown-toggle">Explore Our Page ▾</button>
+          <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html">Team</a>
+            <a href="problem.html">Problem</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="milestones.html">Milestones</a>
+            <a href="pcb.html">PCB Design</a>
+            <a
+              href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
+            <a href="poster.html">Poster</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="section" id="current-solutions">
+    <h2 class="section-title">Current Existing Solutions</h2>
+    <div class="solutions-grid">
+      <div class="card">
+        <img src="images/ucsdBooking.jpg" alt="UCSD bookings" class="photo">
+        <h4>Booking a Court</h4>
+        <p><strong>What works:</strong></p>
+        <ul>
+          <li>Guarantees a court if planned ahead of time.</li>
+        </ul>
+        <p><strong>What is missing:</strong></p>
+        <ul>
+          <li>Doesn't provide the ability to check live occupancy.</li>
+          <li>Doesn't cover basketball courts.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="images/openRec.jpg" alt="Open Rec hours" class="photo">
+        <h4>Checking General Open Recreation Hours</h4>
+        <p><strong>What works:</strong> </p>
+        <ul>
+          <li>Gives a general idea of when the courts are available.</li>
+        </ul>
+        <p><strong>What is missing:</strong> </p>
+        <ul>
+          <li>Doesn't provide the ability to check live occupancy. </li>
+        </ul>
+      </div>
+  </section>
+
+  <section class="section" id="proposed-solution">
+    <h2 class="section-title">Proposed Solution</h2>
+
+    <ul>
+      <li>
+        <h> Motion sensors located on each court scan for activity</h>
+      </li>
+      <li>
+        <h> When a person walks near the sensor while using the court, the sensor sends a detection signal to the
+          processor</h>
+      </li>
+      <li>
+        <h> The processor records a timestamp of when the signal was received, and accumulates the detections over a
+          period of time to determine general activity of each court</h>
+      </li>
+      <li>
+        <h> The id and number of courts being used is sent to a live website, where is it displayed for students to
+          check</h>
+      </li>
+    </ul>
+
+    <div class="Proposed-grid">
+      <div class="card">
+        <img src="images/smallCameraCad1.jpg" alt="CameraCad1" class="photo" width="75%" height="75%">
+
+      </div>
+      <div>
+        <img src="images/smallCameraCad2.jpg" alt="CameraCad2" class="photo" width="100%" height="100%">
+
+      </div>
+
+      <div>
+        <img src="images/CourtTrackerBlock.jpg" alt="CourtBlock" class="photo" width="60%" height="60%">
+
+      </div>
+      <div>
+        <img src="images/courtSketch.jpg" alt="4Court" class="photo" width="100%" height="100%">
+
+      </div>
+    </div>
+
+    <section class="section" id="block-diagram">
+      <h2 class="section-title">Block Diagram</h2>
+
+      <img src="images/CourtTrackerBlock.jpg" alt="CourtBlock" class="photo" width="670" height="670">
+    </section>
+
+
+    <script>
+      const toggle = document.querySelector('.dropdown-toggle');
+      const menu = document.querySelector('.dropdown-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+
+      // Close menu when a link is clicked
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.remove('open'));
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECE196 Problem Website Walkthrough</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">ECE196 Final Project</div>
+      <div class="nav-links">
+        <div class="dropdown">
+          <button class="dropdown-toggle">Explore Our Page ▾</button>
+          <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html">Team</a>
+            <a href="problem.html">Problem</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="milestones.html">Milestones</a>
+            <a href="pcb.html">PCB Design</a>
+            <a href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
+            <a href="poster.html">Poster</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+      <section class="section" id="problem">
+      <h2 class="section-title">Problem</h2>
+
+      <div class="info-grid">
+        <div class="card">
+          <h3>Problem Definition</h3>
+          <p>UCSD students who use campus courts such as basketball and badminton do not have a reliable way to
+            know how crowded the courts are before arriving. This can lead to wasted time walking to the courts
+            only to find that there is no space to play, or missing chances to play when the courts are actually open.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Problem Motivation</h3>
+          <p>Our team chose this problem because students often have to gamble whether the courts will be open or
+            crowded.
+            Right now, many students rely on fixed schedules, but those do not provide reliable real time information.
+            We wanted to focus on a common campus problem that affects recreation and convenience.</p>
+        </div>
+      </div>
+    </section>
+
+        <script>
+      const toggle = document.querySelector('.dropdown-toggle');
+      const menu = document.querySelector('.dropdown-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+
+      // Close menu when a link is clicked
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.remove('open'));
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+      });
+    </script>
+    </body>
+
+</html>

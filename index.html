@@ -14,12 +14,19 @@
     <div class="nav-inner">
       <div class="brand">ECE196 Final Project</div>
       <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#team">Team</a>
-        <a href="#problem">Problem</a>
-        <a href="#current-solutions">Current Solutions</a>
-        <a href="#proposed-solution">Proposed Solution</a>
-        <a href="#milestones">Milestones</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Explore Our Page ▾</button>
+          <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#team">Team</a>
+            <a href="problem.html">Problem</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="milestones.html">Milestones</a>
+            <a href="pcb.html">PCB Design</a>
+            <a href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
+            <a href="poster.html">Poster</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -55,7 +62,7 @@
           <img src="images/ethanUpdatedPic.jpg" alt="Ethan Ha" class="photo">
           <h3>Ethan Ha</h3>
           <p class="bio">
-            I’m a senior ECE student who specializes in software and wants to gain more hardware experience.
+            I am a senior ECE student who specializes in software and wants to gain more hardware experience.
             A fun fact about me is that I have 2 cats!
           </p>
         </div>
@@ -70,7 +77,7 @@
       </div>
     </section>
 
-    <section class="section" id="problem">
+    <!-- <section class="section" id="problem">
       <h2 class="section-title">Problem</h2>
 
       <div class="info-grid">
@@ -130,21 +137,24 @@
           <h> Motion sensors located on each court scan for activity</h>
         </li>
         <li>
-          <h> When a person walks near the sensor while using the court, the sensor sends a detection signal to the processor</h>
+          <h> When a person walks near the sensor while using the court, the sensor sends a detection signal to the
+            processor</h>
         </li>
         <li>
-          <h> The processor records a timestamp of when the signal was received, and accumulates the detections over a period of time to determine general activity of each court</h>
+          <h> The processor records a timestamp of when the signal was received, and accumulates the detections over a
+            period of time to determine general activity of each court</h>
         </li>
         <li>
-          <h> The id and number of courts being used is sent to a live website, where is it displayed for students to check</h>
+          <h> The id and number of courts being used is sent to a live website, where is it displayed for students to
+            check</h>
         </li>
       </ul>
 
       <br> </br>
 
       <div class="Proposed-grid">
-        
-       <div class="card">
+
+        <div class="card">
           <img src="images/smallCameraCad1.jpg" alt="CameraCad1" class="photo" width="75%" height="75%">
 
         </div>
@@ -152,8 +162,8 @@
           <img src="images/smallCameraCad2.jpg" alt="CameraCad2" class="photo" width="100%" height="100%">
 
         </div>
-        
-         <div>
+
+        <div>
           <img src="images/CourtTrackerBlock.jpg" alt="CourtBlock" class="photo" width="60%" height="60%">
 
         </div>
@@ -163,14 +173,14 @@
         </div>
       </div>
 
-    <section class="section" id="block-diagram">
-      <h2 class="section-title">Block Diagram</h2>
-      
-       <img src="images/CourtTrackerBlock.jpg" alt="CourtBlock" class="photo" width="670" height="670">
-    </section>
+      <section class="section" id="block-diagram">
+        <h2 class="section-title">Block Diagram</h2>
 
-    </section>
-    <div class="container" id="milestones">
+        <img src="images/CourtTrackerBlock.jpg" alt="CourtBlock" class="photo" width="670" height="670">
+      </section>
+    </section> -->
+
+    <!-- <div class="container" id="milestones">
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -180,15 +190,18 @@
                 <ul class="timeline">
                   <li class="event" data-date="(4/24) - (4/28)">
                     <h3>Milestone 1: Friday of Week 4 - Tuesday of Week 5</h3>
-                    <p>Have parts approved, ordered, and delivered by the end of Week 5 so that we can begin assembly. The goal is to finish the hardware ASAP to allocate more time to backend.</p>
+                    <p>Have parts approved, ordered, and delivered by the end of Week 5 so that we can begin assembly.
+                      The goal is to finish the hardware ASAP to allocate more time to backend.</p>
                   </li>
                   <li class="event" data-date="(4/26) - (4/30)">
                     <h3>Milestone 2: Thursday of Week 5</h3>
-                    <p>Continue testing throughout Week 5 and finish PCB schematic and ready for final submission on 4/30. Weekly website update.</p>
+                    <p>Continue testing throughout Week 5 and finish PCB schematic and ready for final submission on
+                      4/30. Weekly website update.</p>
                   </li>
                   <li class="event" data-date="(5/8) - (5/10)">
                     <h3>Milestone 3: End of Week 6 - Start of Week 7</h3>
-                    <p>Test in live environment and finalize how and where we will gather, store, and display data. Weekly website update.</p>
+                    <p>Test in live environment and finalize how and where we will gather, store, and display data.
+                      Weekly website update.</p>
                   </li>
                   <li class="event" data-date="(5/15)">
                     <h3>Milestone 4: End of Week 7</h3>
@@ -196,7 +209,8 @@
                   </li>
                   <li class="event" data-date="(5/15)">
                     <h3>Milestone 5: End of Week 8</h3>
-                    <p>Print out mountable enclosure, start testing and gathering data in live environment. Weekly website update + work on poster + record demo video.</p>
+                    <p>Print out mountable enclosure, start testing and gathering data in live environment. Weekly
+                      website update + work on poster + record demo video.</p>
                   </li>
                   <li class="event" data-date="(5/22)">
                     <h3>Milestone 6: End of Week 9</h3>
@@ -208,11 +222,30 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-  <footer>
-    ECE196 Problem Website Walkthrough
-  </footer>
+    <footer>
+      ECE196 Problem Website Walkthrough
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.dropdown-toggle');
+      const menu = document.querySelector('.dropdown-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+
+      // Close menu when a link is clicked
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.remove('open'));
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+      });
+    </script>
 </body>
 
 </html>
