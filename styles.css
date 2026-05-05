@@ -385,3 +385,19 @@
 .dropdown-menu.open {
   display: block;
 }
+
+.pcb-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.pcb-grid .card {
+  padding: 20px;
+}
+
+.pcb-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
