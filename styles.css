@@ -152,6 +152,14 @@
       /* space between images */
     }
 
+
+ .Proposed-grid2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      /* 1 images per row */
+      gap: 16px;
+      /* space between images */
+    }
     .card {
       background: #f8faff;
       border: 1px solid var(--border);
