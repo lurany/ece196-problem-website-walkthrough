@@ -422,3 +422,18 @@
     object-fit: contain;
     border-radius: 12px;
 }
+
+.event.done h3::before {
+  content: "✓ ";
+  color: green;
+}
+
+.event.done h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.event.done p {
+  color: var(--muted);
+  text-decoration: line-through;
+}
