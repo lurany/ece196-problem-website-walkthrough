@@ -544,3 +544,30 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
 }
+
+body {
+  font-size: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.card p,
+.card li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.timeline {
+  font-size: 1.15em;
+}
+
+.timeline h2,
+.timeline h3 {
+  font-size: 1.15rem;
+}
+
+.muted {
+  font-size: 1.1rem;
+}
