@@ -580,3 +580,33 @@ body {
   font-size: 1.25rem;
   line-height: 1.9;
 }
+
+/* Larger text for Problem page */
+#problem .section-title {
+  font-size: 2.8rem;
+}
+
+#problem .card h3 {
+  font-size: 1.8rem;
+}
+
+#problem .card p {
+  font-size: 1.35rem;
+  line-height: 2;
+}
+
+#problem .court-image-box p {
+  font-size: 1.25rem;
+}
+
+/* Tutorial placeholder styling */
+#tutorial-pitch .placeholder {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: var(--text);
+}
+
+#tutorial-pitch .placeholder p {
+  color: var(--muted);
+}

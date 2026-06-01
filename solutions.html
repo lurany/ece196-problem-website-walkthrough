@@ -21,7 +21,6 @@
             <a href="solutions.html">Solutions</a>
             <a href="milestones.html">Milestones</a>
             <a href="pcb.html">PCB Design</a>
-            <a href="software.html">Software Architecture</a>
             <a href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
             <a href="poster.html">Poster</a>
 
@@ -59,27 +58,17 @@
           <li>Doesn't provide the ability to check live occupancy. </li>
         </ul>
       </div>
+    </div>
   </section>
 
   <section class="section" id="proposed-solution">
     <h2 class="section-title">Proposed Solution</h2>
 
     <ul>
-      <li>
-        <h> Motion sensors located on each court scan for activity</h>
-      </li>
-      <li>
-        <h> When a person walks near the sensor while using the court, the sensor sends a detection signal to the
-          processor</h>
-      </li>
-      <li>
-        <h> The processor records a timestamp of when the signal was received, and accumulates the detections over a
-          period of time to determine general activity of each court</h>
-      </li>
-      <li>
-        <h> The id and number of courts being used is sent to a live website, where is it displayed for students to
-          check</h>
-      </li>
+      <li>Motion sensors located on each court scan for activity.</li>
+      <li>When a person walks near the sensor while using the court, the sensor sends a detection signal to the processor.</li>
+      <li>The processor records a timestamp when the signal is received and combines detections over time to estimate court activity.</li>
+      <li>The court activity data is sent to a live website where students can check whether courts are likely being used.</li>
     </ul>
 
     <div class="Proposed-grid">
@@ -88,7 +77,7 @@
 
       </div>
       <div>
-        <img src="images/courtSketch.jpg" alt="4Court" class="photo" width="100%" height="100%">
+        <img src="images/sketchCourt.png" alt="4Court" class="photo" width="100%" height="100%">
       </div>
     </div>
     <!--
@@ -97,6 +86,84 @@
       <img src="images/CourtTrackerBlock700.jpg" alt="CourtBlock" class="diagram-image">
     </section>
 -->
+  </section>
+
+<section class="section" id="hypothesis">
+  <h2 class="section-title">Testable Hypothesis</h2>
+
+  <div class="card">
+    <p>
+      If PIR motion sensors are placed near UCSD campus courts and each motion event is recorded with a timestamp,
+      then our system can estimate whether a court is active or inactive over time. This information can help
+      students decide whether it is worth walking to the courts before they arrive.
+    </p>
+
+    <p>
+      We can test this by comparing the PIR sensor readings against real court observations. During testing,
+      we would record when people are actively using the court and check whether our website shows similar
+      activity patterns.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="tutorial-pitch">
+  <h2 class="section-title">Brief Tutorial Pitch</h2>
+
+  <div class="info-grid">
+    <div class="card">
+      <h3>PIR Motion Sensor Tutorial</h3>
+      <p>
+        My tutorial explains how a PIR motion sensor detects motion by sensing changes in infrared radiation.
+        This connects to PHYS 2C because infrared radiation is part of the electromagnetic spectrum, and people
+        emit infrared radiation due to body heat.
+      </p>
+
+      <p>
+        The tutorial will cover what a PIR sensor is, how it detects nearby movement, and how its signal could
+        be used by a microcontroller in a larger system such as Triton CourtLive.
+      </p>
+    </div>
+
+    <div class="card placeholder">
+      <h3>Tutorial Placeholder 2</h3>
+      <p>
+      </p>
+    </div>
+
+    <div class="card placeholder">
+      <h3>Tutorial Placeholder 3</h3>
+      <p>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="references">
+  <h2 class="section-title">Helpful Resources</h2>
+
+  <div class="info-grid">
+    <div class="card">
+      <h3>Databases</h3>
+      <p>
+        This helped us create the live data system for the website so court activity could be stored and displayed for users.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>PCB tutorial</h3>
+      <p>
+        Designing the schematic and PCB helped us understand how our board would be built and how each component connects. 
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Soldering</h3>
+      <p>
+        Learning to solder helped us assemble the components and troubleshoot hardware issues during the build process.
+      </p>
+    </div>
+  </div>
+</section>
 
     <script>
       const toggle = document.querySelector('.dropdown-toggle');
