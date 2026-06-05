@@ -727,3 +727,11 @@ body {
 #tutorial-pitch .placeholder p {
   color: var(--muted);
 }
+
+.image-credit {
+  margin-top: -6px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}

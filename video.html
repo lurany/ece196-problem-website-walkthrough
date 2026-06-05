@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECE196 Project Video</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="brand">ECE196 Final Project</div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Explore Our Page ▾</button>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="milestones.html">Milestones</a>
+                        <a href="pcb.html">PCB Design</a>
+                        <a href="software.html">Software Architecture</a>
+                        <a href="video.html">Video</a>
+                        <a href="poster.html">Poster</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section" id="video-page">
+            <h2 class="section-title">Project Video</h2>
+            <div class="pcb-grid">
+                <div class="card">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Z_CMfJnekQU" 
+                        width="900"
+                        height="506"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggle = document.querySelector('.dropdown-toggle');
+        const menu = document.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.remove('open'));
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+        });
+    </script>
+</body>
+
+</html>
