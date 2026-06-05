@@ -21,6 +21,7 @@
                         <a href="solutions.html">Solutions</a>
                         <a href="milestones.html">Milestones</a>
                         <a href="pcb.html">PCB Design</a>
+                        <a href="software.html">Software Architecture</a>
                         <a href="https://docs.google.com/document/d/1ArvjWSqZyWCstmWgup7Y_7moODSPmMnTNo6WvHs_hKg/edit?tab=t.0">Video</a>
                         <a href="poster.html">Poster</a>
                     </div>
@@ -30,80 +31,110 @@
     </nav>
 
     <div class="container" id="milestones">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="card-title">Timeline</h6>
-                        <div id="content">
-                            <ul class="timeline">
-                                <li class="event" data-date="(4/24) - (4/28)">
-                                    <h3>Milestone 1: Friday of Week 4 - Tuesday of Week 5 (Camera -> Motion Sensor)</h3>
-                                    <ul>
-                                        <li> Submit parts-ordering form. Outline relative milestones to gauge time
-                                            allocation
-                                            for hardware and software development.</li>
-                                        <li> Create site to display and explain: team
-                                            information, problem, solution, milestones, and more.</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="(4/26) - (4/30)">
-                                    <h3>Milestone 2: Thursday of Week 5</h3>
-                                    <ul>
-                                        <li> Finalize and submit PCB design for ordering.</li>
-                                        <li> Draft up the software architecture.
-                                            4/30. Add PCB page and update milestones accordingly on the website.</li>
-                                    </ul>
-                                    <p> </p>
-                                </li>
-                                <li class="event" data-date="(5/8) - (5/16)">
-                                    <h3>Milestone 3: End of Week 6 - End of Week 7 (PCB Issue: Motion sensor header pins)</h3>
-                                    <ul>
-                                        <li> Assemble and bake PCB. Ensure USB-c connection lights up power LED
-                                            indicator
-                                            along with data transmission to the microcontroller.</li>
-                                        <li> Finalize software
-                                            architecture (especially tech stack). </li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="(5/23)">
-                                    <h3>Milestone 4: End of Week 8 (Continued Hardware issues + Software Development)</h3>
-                                    <ul>
-                                        <li> Configure a DigitalOcean Droplet to host the live site and analytics
-                                            dashboard.</li>
-                                        <li> Validate sensor data collection locally,
-                                            ensuring the PIR sensor accurately captures motion (heat signatures) across
-                                            a
-                                            half-court radius.</li>
-                                        <li> Program the hardware to transmit
-                                            these trigger events directly to our cloud MySQL database.</li>
-                                        <li> Design a mountable enclosure for the hardware and update the web
-                                            platform with a dedicated page explaining our software architecture.</li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="(5/25)">
-                                    <h3>Milestone 5: Start of week 9 (3D Printed Enclosure Issues)</h3>
-                                    <ul>
-                                        <li> Print out mountable enclosure for final product test.</li>
-                                        <li> Leave product on basketball
-                                        courts for 24 hours to simulate real-world usage and see if occupancy updates
-                                        throughout the day and shows empty during closing hours.</li>
-                                        <li> Update website with final video and poster links along with gifs/photos and
-                                        descriptions of our final product. </li>
-                                    </ul>
-                                </li>
-                                <li class="event" data-date="(5/29)">
-                                    <h3>Milestone 6: End of Week 9</h3>
-                                    <ul>
-                                        <li> Finalize all project documentation and prepare for presentation.</li>
-                                    </ul>
-                                </li>
+        <section class="section">
+            <h2 class="section-title">Project Timeline</h2>
+            <div class="timeline-dual">
+                <div class="timeline-column">
+                    <h3 class="timeline-heading">Milestones</h3>
+                    <ul class="timeline timeline-milestones">
+                        <li class="event" data-date="(4/24) - (4/28)">
+                            <h3>Milestone 1: Friday of Week 4 - Tuesday of Week 5 (Camera -> Motion Sensor)</h3>
+                            <ul>
+                                <li>Submit parts-ordering form. Outline relative milestones to gauge time allocation for hardware and software development.</li>
+                                <li>Create site to display and explain: team information, problem, solution, milestones, and more.</li>
                             </ul>
-                        </div>
-                    </div>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 1 image placeholder">
+                                <span>Milestone 1 photo</span>
+                            </div>
+                        </li>
+                        <li class="event" data-date="(4/26) - (4/30)">
+                            <h3>Milestone 2: Thursday of Week 5</h3>
+                            <ul>
+                                <li>Finalize and submit PCB design for ordering.</li>
+                                <li>Draft up the software architecture. 4/30. Add PCB page and update milestones accordingly on the website.</li>
+                            </ul>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 2 image placeholder">
+                                <span>Milestone 2 photo</span>
+                            </div>
+                        </li>
+                        <li class="event" data-date="(5/8) - (5/16)">
+                            <h3>Milestone 3: End of Week 6 - End of Week 7 (PCB Issue: Motion sensor header pins)</h3>
+                            <ul>
+                                <li>Assemble and bake PCB. Ensure USB-c connection lights up power LED indicator along with data transmission to the microcontroller.</li>
+                                <li>Finalize software architecture (especially tech stack).</li>
+                            </ul>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 3 image placeholder">
+                                <span>Milestone 3 photo</span>
+                            </div>
+                        </li>
+                        <li class="event" data-date="(5/23)">
+                            <h3>Milestone 4: End of Week 8 (Continued Hardware issues + Software Development)</h3>
+                            <ul>
+                                <li>Configure a DigitalOcean Droplet to host the live site and analytics dashboard.</li>
+                                <li>Validate sensor data collection locally, ensuring the PIR sensor accurately captures motion (heat signatures) across a half-court radius.</li>
+                                <li>Program the hardware to transmit these trigger events directly to our cloud MySQL database.</li>
+                                <li>Design a mountable enclosure for the hardware and update the web platform with a dedicated page explaining our software architecture.</li>
+                            </ul>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 4 image placeholder">
+                                <span>Milestone 4 photo</span>
+                            </div>
+                        </li>
+                        <li class="event" data-date="(5/25)">
+                            <h3>Milestone 5: Start of week 9 (3D Printed Enclosure Issues)</h3>
+                            <ul>
+                                <li>Print out mountable enclosure for final product test.</li>
+                                <li>Leave product on basketball courts for 24 hours to simulate real-world usage and see if occupancy updates throughout the day and shows empty during closing hours.</li>
+                                <li>Update website with final video and poster links along with gifs/photos and descriptions of our final product.</li>
+                            </ul>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 5 image placeholder">
+                                <span>Milestone 5 photo</span>
+                            </div>
+                        </li>
+                        <li class="event" data-date="(5/29)">
+                            <h3>Milestone 6: End of Week 9</h3>
+                            <ul>
+                                <li>Finalize all project documentation and prepare for presentation.</li>
+                            </ul>
+                            <div class="milestone-image photo placeholder" aria-label="Milestone 6 image placeholder">
+                                <span>Milestone 6 photo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-column">
+                    <h3 class="timeline-heading">Challenges</h3>
+                    <ul class="timeline timeline-challenges">
+                        <li class="event" data-date="(4/24) - (4/28)">
+                            <h3>Camera to Motion Sensor Pivot</h3>
+                            <p>We originally explored camera-based occupancy detection but pivoted to PIR motion sensors for simpler deployment, lower cost, and fewer privacy concerns.</p>
+                        </li>
+                        <li class="event" data-date="(4/26) - (4/30)">
+                            <h3>PCB Design Deadline</h3>
+                            <p> We struggled with the design of our PCB since none of us had experience going into this project.</p>
+                        </li>
+                        <li class="event" data-date="(5/8) - (5/16)">
+                            <h3>Motion Sensor Header Pin Mismatch</h3>
+                            <p>After assembling the PCB, we discovered the motion sensor header pins did not match our footprint, resulting in a reverse polarity. We flipped the motion sensor around and it worked fine after that.</p>
+                        </li>
+                        <li class="event" data-date="(5/23)">
+                            <h3>Hardware Reliability and Cloud Integration</h3>
+                            <p>At this point, we were trying to setup DigitalOcean for hosting but there were many account and funding issues. Customer support didn't get back to us after a week so we had to pivot to Render (backend),
+                                Vercel (frontend), and Turso (DB).
+                            </p>
+                        </li>
+                        <li class="event" data-date="(5/25)">
+                            <h3>3D Printed Enclosure Fit Issues</h3>
+                            <p>Printed enclosure dimensions and mounting points needed adjustment before the hardware could be deployed on outdoor courts for live testing. Also many issues with the 3D printers.</p>
+                        </li>
+                        <li class="event" data-date="(5/29)">
+                            <h3>Final Documentation Sprint</h3>
+                            <p>Our final deadlines/milestones were mostly pushed back by a week so there was a time crunch on that end.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <script>
