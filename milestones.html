@@ -42,20 +42,20 @@
                             <ul>
                                 <li>Submit parts-ordering form. Outline relative milestones to gauge time allocation for hardware and software development.</li>
                                 <li>Create site to display and explain: team information, problem, solution, milestones, and more.</li>
-                            </ul>
-                            <div class="milestone-image photo placeholder" aria-label="Milestone 1 image placeholder">
-                                <span>Milestone 1 photo</span>
-                            </div>
+                            </ul> 
+                                <div class="card">
+                                    <img src="images/Courtlive3DmodelV1.png" alt="MotionV1" class="photo" width="200" height="200">
+                                </div>
                         </li>
                         <li class="event" data-date="(4/26) - (4/30)">
                             <h3>Milestone 2: Thursday of Week 5</h3>
                             <ul>
                                 <li>Finalize and submit PCB design for ordering.</li>
                                 <li>Draft up the software architecture. 4/30. Add PCB page and update milestones accordingly on the website.</li>
-                            </ul>
-                            <div class="milestone-image photo placeholder" aria-label="Milestone 2 image placeholder">
-                                <span>Milestone 2 photo</span>
-                            </div>
+                            </ul> 
+                                <div class="card">
+                                    <img src="images/orgMotion.png" alt="orgMotion" class="photo" width="200" height="200">
+                                </div>
                         </li>
                         <li class="event" data-date="(5/8) - (5/16)">
                             <h3>Milestone 3: End of Week 6 - End of Week 7 (PCB Issue: Motion sensor header pins)</h3>
@@ -63,9 +63,10 @@
                                 <li>Assemble and bake PCB. Ensure USB-c connection lights up power LED indicator along with data transmission to the microcontroller.</li>
                                 <li>Finalize software architecture (especially tech stack).</li>
                             </ul>
-                            <div class="milestone-image photo placeholder" aria-label="Milestone 3 image placeholder">
-                                <span>Milestone 3 photo</span>
-                            </div>
+                                <div class="card">
+                                    <img src="images/finishedPCB.png" alt="finishedPCB" class="photo" width="200" height="200">
+                                </div>
+
                         </li>
                         <li class="event" data-date="(5/23)">
                             <h3>Milestone 4: End of Week 8 (Continued Hardware issues + Software Development)</h3>
@@ -81,22 +82,22 @@
                         </li>
                         <li class="event" data-date="(5/25)">
                             <h3>Milestone 5: Start of week 9 (3D Printed Enclosure Issues)</h3>
-                            <ul>
+                            <ul> 
                                 <li>Print out mountable enclosure for final product test.</li>
                                 <li>Leave product on basketball courts for 24 hours to simulate real-world usage and see if occupancy updates throughout the day and shows empty during closing hours.</li>
                                 <li>Update website with final video and poster links along with gifs/photos and descriptions of our final product.</li>
-                            </ul>
-                            <div class="milestone-image photo placeholder" aria-label="Milestone 5 image placeholder">
-                                <span>Milestone 5 photo</span>
-                            </div>
+                            </ul> 
+                                <div class="card">
+                                    <img src="images/FirstPrint1.png" alt="FirstPrint1" class="photo" width="200" height="200">
+                                </div>
                         </li>
                         <li class="event" data-date="(5/29)">
                             <h3>Milestone 6: End of Week 9</h3>
                             <ul>
                                 <li>Finalize all project documentation and prepare for presentation.</li>
                             </ul>
-                            <div class="milestone-image photo placeholder" aria-label="Milestone 6 image placeholder">
-                                <span>Milestone 6 photo</span>
+                            <div class="card">
+                                <img src="images/CourtLiveTest.png" alt="CourtTest1" class="photo" width="200" height="200">
                             </div>
                         </li>
                     </ul>
@@ -107,15 +108,34 @@
                     <ul class="timeline timeline-challenges">
                         <li class="event" data-date="(4/24) - (4/28)">
                             <h3>Camera to Motion Sensor Pivot</h3>
-                            <p>We originally explored camera-based occupancy detection but pivoted to PIR motion sensors for simpler deployment, lower cost, and fewer privacy concerns.</p>
+                            <p>We originally explored camera-based occupancy detection but pivoted to PIR motion sensors for simpler deployment, lower cost, and fewer privacy concerns.
+                            The design became centered around a motion sensor on the PCB with either an integrated 7 segment display or LCD screen to display or change the Court ID, 
+                                manage settings, and help with debugging. </p>
+
+                             <div class="card">
+                                 <h3>Camera Design</h3>
+                                <img src="images/CameraCad2.jpg" alt="CameraCad2" class="photo" width="200" height="200">
+                            </div>
                         </li>
                         <li class="event" data-date="(4/26) - (4/30)">
                             <h3>PCB Design Deadline</h3>
-                            <p> We struggled with the design of our PCB since none of us had experience going into this project.</p>
+                            <p> We struggled with the design of our PCB since none of us had experience going into this project.
+                            There were many PCB errors that had to be quickly resolved before the board was sent out to be manufactured. 
+                            As a result, the external battery only powered the motion sensor. While the C port could power both the sensor and the ESP32, 
+                            there was not sufficient voltage (5V) to the sensor, requiring both ports to be powered by external batteries to operate effectively. 
+                            The initial enclosure design was also being designed and tested at this point.
+                            </p>
+
                         </li>
                         <li class="event" data-date="(5/8) - (5/16)">
                             <h3>Motion Sensor Header Pin Mismatch</h3>
-                            <p>After assembling the PCB, we discovered the motion sensor header pins did not match our footprint, resulting in a reverse polarity. We flipped the motion sensor around and it worked fine after that.</p>
+                            <p>After assembling the PCB, we discovered the motion sensor header pins did not match our footprint, resulting in a reverse polarity. We flipped the motion sensor around and it worked fine after that.
+                            This required the enclosure design to be taller as the sensor could not be mounted directly onto the PCB in this flipped position, 
+                            as it blocks access to the adjustment controls and exposed pins could short out the ESP32. The sensor was mounted directly onto the lid
+                            and space had to be made for wire connections to the PCB. A mounting ledge was also added for more surface area to stick the enclosure 
+                            under hoops or onto walls or lightpoles.
+                            </p>
+                            
                         </li>
                         <li class="event" data-date="(5/23)">
                             <h3>Hardware Reliability and Cloud Integration</h3>
