@@ -67,9 +67,12 @@
 
     <ul>
       <li>Motion sensors located on each court scan for activity.</li>
-      <li>When a person walks near the sensor while using the court, the sensor sends a detection signal to the processor.</li>
-      <li>The processor records a timestamp when the signal is received and combines detections over time to estimate court activity.</li>
-      <li>The court activity data is sent to a live website where students can check whether courts are likely being used.</li>
+      <li>When a person walks near the sensor while using the court, the sensor sends a detection signal to the
+        processor.</li>
+      <li>The processor records a timestamp when the signal is received and combines detections over time to estimate
+        court activity.</li>
+      <li>The court activity data is sent to a live website where students can check whether courts are likely being
+        used.</li>
     </ul>
 
     <div class="Proposed-grid">
@@ -89,111 +92,121 @@
 -->
   </section>
 
-<section class="section" id="hypothesis">
-  <h2 class="section-title">Testable Hypothesis</h2>
+  <section class="section" id="hypothesis">
+    <h2 class="section-title">Testable Hypothesis</h2>
 
-  <div class="card">
-    <p>
-      If PIR motion sensors are placed near UCSD campus courts and each motion event is recorded with a timestamp,
-      then our system can estimate whether a court is active or inactive over time. This information can help
-      students decide whether it is worth walking to the courts before they arrive.
-    </p>
-
-    <p>
-      We can test this by comparing the PIR sensor readings against real court observations. During testing,
-      we would record when people are actively using the court and check whether our website shows similar
-      activity patterns.
-    </p>
-  </div>
-</section>
-
-<section class="section" id="tutorial-pitch">
-  <h2 class="section-title">Brief Tutorial Pitch</h2>
-
-  <div class="info-grid">
     <div class="card">
-      <h3>PIR Motion Sensor Tutorial</h3>
       <p>
-        This tutorial explains how a PIR motion sensor detects nearby movement by sensing
-        changes in infrared radiation. Since people emit infrared radiation as body heat,
-        the sensor can detect when someone moves within its range. It will cover the
-        sensor's basic operation, its role in detecting court activity, and how its output
-        signal can be used by a microcontroller in Triton CourtLive.
+        If PIR motion sensors are placed near UCSD campus courts and each motion event is recorded with a timestamp,
+        then our system can estimate whether a court is active or inactive over time. This information can help
+        students decide whether it is worth walking to the courts before they arrive.
       </p>
+
+      <p>
+        We can test this by comparing the PIR sensor readings against real court observations. During testing,
+        we would record when people are actively using the court and check whether our website shows similar
+        activity patterns.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="tutorial-pitch">
+    <h2 class="section-title">Brief Tutorial Pitch</h2>
+
+    <div class="info-grid">
       <div class="card">
-        <img src="images/PIR-Motion-Sensor-How-It-Works.png" alt="PIR" class="photo" width="200" height="200">
-      </div>
+        <h3>PIR Motion Sensor Tutorial</h3>
+        <p>
+          This tutorial explains how a PIR motion sensor detects nearby movement by sensing
+          changes in infrared radiation. Since people emit infrared radiation as body heat,
+          the sensor can detect when someone moves within its range. It will cover the
+          sensor's basic operation, its role in detecting court activity, and how its output
+          signal can be used by a microcontroller in Triton CourtLive.
+        </p>
+        <div class="card">
+          <img src="images/PIR-Motion-Sensor-How-It-Works.png" alt="PIR" class="photo" width="200" height="200">
+        </div>
         <p class="image-credit">
           Source found through Google Images.
         </p>
-        </div>
+      </div>
 
-    <div class="card">
-      <h3> Object Recognition Tutorial</h3>
-      <p>
-        This tutorial allows the ESP32 dev board to detect and identify objects via a live camera sensor input. 
-        A YOLOV3 model is implemented using Convolutional Neural Network (CNN) image processing to successfully identify objects 
-        from the camera’s video data at around 2 FPS. 
-      </p>
+      <div class="card">
+        <h3> Object Recognition Tutorial</h3>
+        <p>
+          This tutorial allows the ESP32 dev board to detect and identify objects via a live camera sensor input.
+          A YOLOV3 model is implemented using Convolutional Neural Network (CNN) image processing to successfully
+          identify objects
+          from the camera’s video data at around 2 FPS.
+        </p>
         <div class="card">
-                    <img src="images/LiveDemo.jpg" alt="ObjectRecogition" class="photo" width="200" height="200">
+          <img src="images/LiveDemo.jpg" alt="ObjectRecogition" class="photo" width="200" height="200">
         </div>
       </div>
 
-    <div class="card">
-      <h3>VU Meter Fan-Speed Controller</h3>
-      <p>
-        This tutorial is an extension of the VU meter mini project aims to control the speed of a fan based on claps by applying amplitude thresholding. One clap speeds it up and two claps slows it down.
-      </p>
+      <div class="card">
+        <h3>VU Meter Fan-Speed Controller</h3>
+        <p>
+          This tutorial is an extension of the VU meter mini project aims to control the speed of a fan based on claps
+          by applying amplitude thresholding. One clap speeds it up and two claps slows it down.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="references">
-  <h2 class="section-title">Helpful Resources</h2>
+  <section class="section" id="references">
+    <h2 class="section-title">Helpful Resources</h2>
 
-  <div class="info-grid">
-    <div class="card">
-      <h3>TAs</h3>
-      <p>
-        Thanks to Korey, Ming, Juliana, and Ferrari for their guidance on design choices, PCB design, and hardware troubleshooting throughout the project.
-      </p>
+    <div class="info-grid">
+      <div class="card">
+        <h3>TAs</h3>
+        <p>
+          Thanks to Korey, Ming, Juliana, and Ferrari for their guidance on design choices, PCB design, and hardware
+          troubleshooting throughout the project.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>PCB tutorial</h3>
+        <p>
+          The PCB tutorial the Korey cooked up was super helpful for learning how to use KiCad and design our PCB. It made the process much more approachable and gave us confidence to iterate on our design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Onshape Tutorial</h3>
+        <p>
+          We used the tips and tricks covered by Ming during lecture to design our 3D-printed enclosure in Onshape. It was our first time using a CAD software, and the tutorial made it much easier to get started and create a functional design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI-Use Disclosure</h3>
+        <p>
+          Claude was used to assist with some of the drafting, structuring, and debugging in our project.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>PCB tutorial</h3>
-      <p>
-        Designing the schematic and PCB helped us understand how our board would be built and how each component connects. 
-      </p>
-    </div>
+  <script>
+    const toggle = document.querySelector('.dropdown-toggle');
+    const menu = document.querySelector('.dropdown-menu');
 
-    <div class="card">
-      <h3>AI-Use Disclosure</h3>
-      <p>
-        Claude was used to assist with some of the drafting, structuring, and debugging in our project.
-      </p>
-    </div>
-  </div>
-</section>
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
 
-    <script>
-      const toggle = document.querySelector('.dropdown-toggle');
-      const menu = document.querySelector('.dropdown-menu');
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
 
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-      });
-
-      // Close menu when a link is clicked
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => menu.classList.remove('open'));
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.dropdown')) menu.classList.remove('open');
-      });
-    </script>
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) menu.classList.remove('open');
+    });
+  </script>
 </body>
 
 </html>
