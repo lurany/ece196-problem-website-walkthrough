@@ -43,8 +43,18 @@
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 700;
       font-size: 1.1rem;
+    }
+
+    .nav-logo {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 50%;
     }
 
     .nav-links a {
